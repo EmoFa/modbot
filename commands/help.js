@@ -42,7 +42,7 @@ module.exports = {
         message.author.send(helpEmbed2);
         message.author.send(helpEmbed3);
         message.react('📬');
-        message.channel.send("You've got mail!")
+        message.channel.send("You've got mail!");
     }
 }
 

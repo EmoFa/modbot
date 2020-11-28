@@ -50,6 +50,8 @@ client.on('message', message =>{
         client.commands.get('unmute').execute(message, args);
     } else if(command === '8ball'){
         client.commands.get('8ball').execute(message, args, Discord, botversion);
+    } else if(command === 'info'){
+        client.commands.get('info').execute(message, args, Discord, botversion);
     }
 });
 
