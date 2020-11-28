@@ -1,4 +1,4 @@
-const { version } = require("discord.js");
+const { version } = require("main.js");
 
 module.exports = {
     name: 'help',
