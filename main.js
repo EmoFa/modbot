@@ -1,17 +1,10 @@
 const Discord = require('discord.js');
 
-const Keyv = require('keyv');
-const keyv = new Keyv('sqlite://path/to/database.sqlite');
-
-keyv.on('error', handleConnectionError);
-
 const config = require('./config.json');
 
 const client = new Discord.Client();
 
-const prefixes = new Keyv('sqlite://path/to.sqlite');
-
-const globalPrefix = config.prefix;
+const prefix = config.prefix;
 
 const fs = require('fs');
 
@@ -30,9 +23,9 @@ client.once('ready', () =>{
 });
 
 client.on('message', message =>{
-    if(!message.content.startsWith(globalPrefix) || message.author.bot) return;
+    if(!message.content.startsWith(prefix) || message.author.bot) return;
 
-    const args = message.content.slice(globalPrefix.length).split(/ +/);
+    const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
     if(command === 'ping'){
