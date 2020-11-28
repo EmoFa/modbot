@@ -2,7 +2,7 @@ module.exports = {
     name: 'unmute',
     description: 'Unmutes a member.',
     execute(message, args){
-        const target = message.metions.user.first();
+        const target = message.metions.users.first();
         if(target){
             let mainRole = message.guild.roles.cache.find(role => role.name === "Member");
             let muteRole = message.guild.roles.cache.find(role => role.name === "Muted");
