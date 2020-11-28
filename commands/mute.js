@@ -4,12 +4,12 @@ module.exports = {
     name: 'mute',
     description: 'Mutes a member.',
     execute(message, args){
-        const member = message.metions.user.first();
-        if(member){
+        const target = message.metions.user.first();
+        if(target){
             let mainRole = message.guild.roles.cache.find(role => role.name === "Member");
             let muteRole = message.guild.roles.cache.find(role => role.name === "Muted");
 
-            let memberTarget = message.guid.members.cache.get(member.id);
+            let memberTarget = message.guid.members.cache.get(target.id);
 
             if(!args[1]){
                 memberTarget.roles.remove(mainRole.id);
