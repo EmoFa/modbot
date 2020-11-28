@@ -1,7 +1,7 @@
 module.exports = {
     name: 'userinfo',
     description: "Shows the authors info.",
-    execute(message, args){
+    execute(message, args, Discord){
         const newEmbed = new Discord.MessageEmbed()
         .setColor('#6DB6D9')
         .setTitle("__User Information__")
@@ -13,5 +13,7 @@ module.exports = {
         )
         .setThumbnail(message.author.avatarUrl)
         .setFooter('Version: ' + version + ' • ' + createdAt)
+
+        message.channel.send(newEmbed)
     }
 }

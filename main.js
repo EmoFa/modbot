@@ -69,7 +69,7 @@ client.on('message', message =>{
     } else if(command === '8ball'){
         client.commands.get('8ball').execute(message, args);
     } else if(command === 'userinfo'){
-        client.commands.get('userinfo').execute(message, args);
+        client.commands.get('userinfo').execute(message, args, Discord);
     }
 });
 
