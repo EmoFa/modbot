@@ -21,6 +21,16 @@ module.exports = {
             {name: 'clear', value: "You can use this command to clear a certain amount of messages. (including the command you sent) \nExample: -clear 10"}
         )
 
+        const newEmbed3 = new Discord.MessageEmbed()
+        .setColor('#6DB6D9')
+        .setTitle('__Fun__')
+        .setDescription("Here are the current fun commands.")
+        .addFields(
+            {name: 'ping', value: "Responds with 'pong!'. (may be changed to actually show latency later)"},
+            {name: 'youtube', value: "The bot will give you his youtube channel, if he even has one."},
+            {name: '8ball', value: "Basic magic 8ball command. \nExample: -8ball Will I have a good day?"}
+        )
+
         message.author.send(newEmbed);
         message.author.send(newEmbed2);
         message.react('📬');
