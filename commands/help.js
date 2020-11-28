@@ -17,7 +17,7 @@ module.exports = {
         const newEmbed2 = new Discord.MessageEmbed()
         .setColor('#6DB6D9')
         .setTitle('__Utility__')
-        setDescription('Here are the current utility commands for this bot.')
+        .setDescription('Here are the current utility commands for this bot.')
         .addFields(
             {name: 'clear', value: "You can use this command to clear a certain amount of messages. (including the command you sent) \nExample: -clear 10"}
         )
