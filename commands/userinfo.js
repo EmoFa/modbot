@@ -3,7 +3,7 @@ module.exports = {
     description: "Shows the authors info.",
     execute(message, args, Discord, botversion){
         const user = message.mentions.users.first() || message.member.user;
-        const member = guild.members.cache.get(user.id);
+        const member = message.guild.members.cache.get(user.id);
 
         const userinfoEmbed = new Discord.MessageEmbed()
         .setColor('#6DB6D9')
