@@ -41,7 +41,7 @@ module.exports = {
               .setFooter('Version: ' + botversion)
               .setTimestamp()
         
-            channel.send(userinfoEmbed)
+            message.channel.send(userinfoEmbed);
           }
         }
     }
