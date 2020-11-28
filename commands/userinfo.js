@@ -12,7 +12,8 @@ module.exports = {
             {name: 'Current Server', vale: message.guild.name}
         )
         .setThumbnail(message.author.avatarUrl)
-        .setFooter('Version: ' + version + ' • ' + createdAt)
+        .setFooter('Version: ' + version)
+        .setTimestamp()
 
         message.channel.send(newEmbed)
     }
