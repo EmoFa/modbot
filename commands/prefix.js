@@ -1,5 +1,6 @@
 const Keyv = require('keyv');
 const keyv = new Keyv('sqlite://path/to/database.sqlite');
+const prefixes = new Keyv('sqlite://path/to.sqlite');
 
 keyv.on('error', handleConnectionError);
 
