@@ -1,8 +1,9 @@
 const Discord = require('discord.js');
 
 const Keyv = require('keyv');
-
 const keyv = new Keyv('sqlite://path/to/database.sqlite');
+
+keyv.on('error', handleConnectionError);
 
 const config = require('./config.json');
 
