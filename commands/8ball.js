@@ -5,7 +5,7 @@ module.exports = {
     name: '8ball',
     description: "Ask the magic 8ball a question.",
     async execute(message, args, Discord, botversion){
-        if(!args[0]) return message.reply("Please ask a question");
+        if(!args[0]) return message.reply("please ask a question");
 
         const magic8ballEmbed = new Discord.MessageEmbed()
         .setColor('#6DB6D9')
