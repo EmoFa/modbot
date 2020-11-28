@@ -8,7 +8,7 @@ const prefix = config.prefix;
 
 const fs = require('fs');
 
-const version = ('1.3.2');
+const botversion = ('1.3.2');
 
 client.commands = new Discord.Collection();
 
@@ -37,7 +37,8 @@ client.on('guildMemberAdd', member => {
         {name: 'Account Age', value: member.createdAt}
     )
     .setThumbnail(member.avatarUrl)
-    .setFooter('Version: ' + version + ' • ' + createdAt)
+    .setFooter('Version: ' + botversion)
+    .setTimestamp()
 
     channel.send(newEmbed);
   });

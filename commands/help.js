@@ -1,4 +1,4 @@
-const { version } = require("main.js");
+const { version } = require(botversion);
 
 module.exports = {
     name: 'help',
