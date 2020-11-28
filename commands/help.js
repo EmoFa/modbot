@@ -21,7 +21,8 @@ module.exports = {
         .setDescription("Here are the current utility commands for this bot.")
         .addFields(
             {name: 'clear', value: "You can use this command to clear a certain amount of messages. (including the command you sent) \nExample: -clear 10"},
-            {name: 'permissiontest', value: "You can use this command to see if the permissions for moderation commands are working. If the permissions are working the bot will respond with 'the code is working', if the permissions are not working the bot will respond with 'the cdoe is not working.' \nIf the bot says the code is not working please tell <@527184387209691147> to fix it."}
+            {name: 'permissiontest', value: "You can use this command to see if the permissions for moderation commands are working. If the permissions are working the bot will respond with 'the code is working', if the permissions are not working the bot will respond with 'the cdoe is not working.' \nIf the bot says the code is not working please tell <@527184387209691147> to fix it."},
+            {name: 'info', value: "This command will DM an embed with a little bit of information about the bot."}
         )
         .setFooter('Version: ' + botversion)
         .setTimestamp()
