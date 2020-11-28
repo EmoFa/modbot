@@ -9,6 +9,7 @@
   "author": "SleepDeprived",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.5.0"
+    "discord.js": "^12.5.0",
+    "ms": "^2.1.2"
   }
 }

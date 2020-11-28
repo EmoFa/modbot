@@ -1,6 +1,6 @@
 module.exports = {
     name: 'command name here',
-    description: 'command description here',
+    description: "command description here",
     execute(message, args){
         *code goes here*
     }

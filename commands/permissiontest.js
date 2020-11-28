@@ -4,7 +4,7 @@ module.exports = {
     name: 'permissiontest',
     description: 'command to test permission requirement code.',
     execute(message, args){
-        if(message.member.roles.cache.has('746083488423346316')){
+        if(message.member.roles.cache.some(role => role.name === "Mod")){
             message.channel.send('the code is working')
 
         } else {
