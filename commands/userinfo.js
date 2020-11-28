@@ -16,7 +16,7 @@ module.exports = {
             {name: 'Joined Discord', vale: new Date(user.createdTimestamp).toLocaleDateString()},
             {name: 'Roles', vale: member.roles.cache.size - 1}
         )
-        .setThumbnail(user.displayavatarUrl())
+        .setThumbnail(message.author.displayavatarUrl())
         .setFooter('Version: ' + botversion)
         .setTimestamp()
 
