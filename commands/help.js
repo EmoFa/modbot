@@ -12,20 +12,19 @@ module.exports = {
             {name: 'mute', value: "You can use this command to mute a member. You can mute them until you decide to unmute them or put them on a timer \nExample: -mute @Username#1234 or -mute @Username#1234 10s (s = seconds, m = minutes, d = days, y = years)"},
             {name: 'unmute', value: "You can use this command to unmute a member. \nExample: -unmute @Username#1234"}
         )
-        .setImage('https://i.imgur.com/O3DHIA5.gif')
 
         const newEmbed2 = new Discord.MessageEmbed()
         .setColor('#6DB6D9')
         .setTitle('__Utility__')
-        .setDescription('Here are the current utility commands for this bot.')
+        .setDescription("Here are the current utility commands for this bot.")
         .addFields(
             {name: 'clear', value: "You can use this command to clear a certain amount of messages. (including the command you sent) \nExample: -clear 10"}
         )
-        .setThumbnail('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcHkaDgLOYmj0KsOTvseK_pYbn4dXnvXmuph13aLzadJ0sMfYbzjkYqNThk-vkB69nGlSU_HQngg&usqp=CAc')
 
         message.author.send(newEmbed);
         message.author.send(newEmbed2);
-        message.react('✅');
+        message.react('📬');
+        message.channel.send("You've got mail!")
     }
 }
 
@@ -36,3 +35,6 @@ module.exports = {
 //    {name: 'youtube', value: 'The bot will send you his youtube channel, if he even has one.'},
 //    {name: 'permissiontest', value: 'This command has no use (to you atleast). It was made for me to test permission requirement code. (I may also remove this command later as well'}
 //)
+
+//.setImage('https://i.imgur.com/O3DHIA5.gif')
+//.setThumbnail('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcHkaDgLOYmj0KsOTvseK_pYbn4dXnvXmuph13aLzadJ0sMfYbzjkYqNThk-vkB69nGlSU_HQngg&usqp=CAc')
