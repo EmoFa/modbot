@@ -12,7 +12,7 @@ module.exports = {
             {name: 'mute', value: "You can use this command to mute a member. You can mute them until you decide to unmute them or put them on a timer \nExample: -mute @Username#1234 or -mute @Username#1234 10s (s = seconds, m = minutes, d = days, y = years)"},
             {name: 'unmute', value: "You can use this command to unmute a member. \nExample: -unmute @Username#1234"}
         )
-        .setThumbnail('https://i.imgur.com/O3DHIA5.gif')
+        .setImage('https://i.imgur.com/O3DHIA5.gif')
 
         message.author.send(newEmbed);
     }
