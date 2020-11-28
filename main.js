@@ -2,6 +2,8 @@ const Discord = require('discord.js');
 
 const Keyv = require('keyv');
 
+const keyv = new Keyv('sqlite://path/to/database.sqlite');
+
 const config = require('./config.json');
 
 const client = new Discord.Client();

@@ -1,4 +1,6 @@
 const Keyv = require('keyv');
+const keyv = new Keyv('sqlite://path/to/database.sqlite');
+
 keyv.on('error', err => console.error('Keyv connection error:', err));
 
 module.exports = {
