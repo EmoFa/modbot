@@ -24,25 +24,6 @@ client.once('ready', () =>{
     client.user.setActivity('for -', {type: "WATCHING"}).catch(console.error);
 });
 
-client.on('guildMemberAdd', member => {
-    const channel = member.guild.channels.cache.find(ch => ch.name === 'welcome');
-    if (!channel) return;
-
-    const welcomeEmbed = new Discord.MessageEmbed()
-    .setColor('#55B54C')
-    .setTitle("__Someone Has Joined!__")
-    .setDescription("Here is their user information.")
-    .addField(
-        {name: 'Username', value: `${member}`},
-        {name: 'Account Age', value: member.createdAt}
-    )
-    .setThumbnail(member.avatarUrl)
-    .setFooter('Version: ' + botversion)
-    .setTimestamp()
-
-    channel.send(welcomeEmbed);
-  });
-
 client.on('message', message =>{
     if(!message.content.startsWith(prefix) || message.author.bot) return;
 

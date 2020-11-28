@@ -2,19 +2,46 @@ module.exports = {
     name: 'userinfo',
     description: "Shows the authors info.",
     execute(message, args, Discord, botversion){
-        const userinfoEmbed = new Discord.MessageEmbed()
-        .setColor('#6DB6D9')
-        .setTitle("__User Information__")
-        .setDescription("Here is your user info.")
-        .addFields(
-            {name: 'Username', vale: message.author.username},
-            {name: 'Account Age', vale: message.author.createdAt},
-            {name: 'Current Server', vale: message.guild.name}
-        )
-        .setThumbnail(message.author.avatarUrl)
-        .setFooter('Version: ' + botversion)
-        .setTimestamp()
-
-        message.channel.send(userinfoEmbed)
+        run = async (message) => {
+            const { guild, channel } = message
+        
+            const user = message.mentions.users.first() || message.member.user
+            const member = guild.members.cache.get(user.id)
+        
+            console.log(member)
+        
+            const userinfoEmbed = new MessageEmbed()
+              .setAuthor(`User info for ${user.username}`, user.displayAvatarURL())
+              .addFields(
+                {
+                  name: 'User tag',
+                  value: user.tag,
+                },
+                {
+                  name: 'Is bot',
+                  value: user.bot,
+                },
+                {
+                  name: 'Nickname',
+                  value: member.nickname || 'None',
+                },
+                {
+                  name: 'Joined Server',
+                  value: new Date(member.joinedTimestamp).toLocaleDateString(),
+                },
+                {
+                  name: 'Joined Discord',
+                  value: new Date(user.createdTimestamp).toLocaleDateString(),
+                },
+                {
+                  name: 'Roles',
+                  value: member.roles.cache.size - 1,
+                }
+              )
+              .setFooter('Version: ' + botversion)
+              .setTimestamp()
+        
+            channel.send(userinfoEmbed)
+          }
+        }
     }
-}
