@@ -4,7 +4,7 @@ module.exports = {
     name: 'mute',
     description: 'Mutes a member.',
     execute(message, args){
-        const target = message.metions.users.first();
+        const target = message.mentions.users.first();
         if(target){
             let mainRole = message.guild.roles.cache.find(role => role.name === "Member");
             let muteRole = message.guild.roles.cache.find(role => role.name === "Muted");
