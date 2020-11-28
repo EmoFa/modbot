@@ -49,7 +49,7 @@ client.on('message', message =>{
     } else if(command === 'unmute'){
         client.commands.get('unmute').execute(message, args);
     } else if(command === '8ball'){
-        client.commands.get('8ball').execute(message, args);
+        client.commands.get('8ball').execute(message, args, Discord, botversion);
     }
 });
 
