@@ -21,7 +21,7 @@ module.exports = {
         .addFields(
             {name: 'clear', value: "You can use this command to clear a certain amount of messages. (including the command you sent) \nExample: -clear 10"}
         )
-        .setImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcHkaDgLOYmj0KsOTvseK_pYbn4dXnvXmuph13aLzadJ0sMfYbzjkYqNThk-vkB69nGlSU_HQngg&usqp=CAc')
+        .setThumbnail('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcHkaDgLOYmj0KsOTvseK_pYbn4dXnvXmuph13aLzadJ0sMfYbzjkYqNThk-vkB69nGlSU_HQngg&usqp=CAc')
 
         message.author.send(newEmbed);
         message.author.send(newEmbed2);
