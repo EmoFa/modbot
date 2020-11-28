@@ -2,7 +2,7 @@ module.exports = {
     name: 'help',
     description: "The bot will DM you a help embed.",
     execute(message, args, Discord, botversion){
-        const newEmbed = new Discord.MessageEmbed()
+        const helpEmbed = new Discord.MessageEmbed()
         .setColor('#6DB6D9')
         .setTitle('__Moderation__')
         .setDescription('Here are the current moderation commands for this bot.')
@@ -15,7 +15,7 @@ module.exports = {
         .setFooter('Version: ' + botversion)
         .setTimestamp()
 
-        const newEmbed2 = new Discord.MessageEmbed()
+        const helpEmbed2 = new Discord.MessageEmbed()
         .setColor('#6DB6D9')
         .setTitle('__Utility__')
         .setDescription("Here are the current utility commands for this bot.")
@@ -26,7 +26,7 @@ module.exports = {
         .setFooter('Version: ' + botversion)
         .setTimestamp()
 
-        const newEmbed3 = new Discord.MessageEmbed()
+        const helpEmbed3 = new Discord.MessageEmbed()
         .setColor('#6DB6D9')
         .setTitle('__Fun__')
         .setDescription("Here are the current fun commands.")
@@ -38,9 +38,9 @@ module.exports = {
         .setFooter('Version: ' + botversion)
         .setTimestamp()
 
-        message.author.send(newEmbed);
-        message.author.send(newEmbed2);
-        message.author.send(newEmbed3);
+        message.author.send(helpEmbed);
+        message.author.send(helpEmbed2);
+        message.author.send(helpEmbed3);
         message.react('📬');
         message.channel.send("You've got mail!")
     }

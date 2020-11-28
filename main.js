@@ -28,7 +28,7 @@ client.on('guildMemberAdd', member => {
     const channel = member.guild.channels.cache.find(ch => ch.name === 'welcome');
     if (!channel) return;
 
-    const newEmbed = new Discord.MessageEmbed()
+    const welcomeEmbed = new Discord.MessageEmbed()
     .setColor('#55B54C')
     .setTitle("__Someone Has Joined!__")
     .setDescription("Here is their user information.")
@@ -40,7 +40,7 @@ client.on('guildMemberAdd', member => {
     .setFooter('Version: ' + botversion)
     .setTimestamp()
 
-    channel.send(newEmbed);
+    channel.send(welcomeEmbed);
   });
 
 client.on('message', message =>{

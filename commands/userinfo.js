@@ -2,7 +2,7 @@ module.exports = {
     name: 'userinfo',
     description: "Shows the authors info.",
     execute(message, args, Discord, botversion){
-        const newEmbed = new Discord.MessageEmbed()
+        const userinfoEmbed = new Discord.MessageEmbed()
         .setColor('#6DB6D9')
         .setTitle("__User Information__")
         .setDescription("Here is your user info.")
@@ -15,6 +15,6 @@ module.exports = {
         .setFooter('Version: ' + botversion)
         .setTimestamp()
 
-        message.channel.send(newEmbed)
+        message.channel.send(userinfoEmbed)
     }
 }
