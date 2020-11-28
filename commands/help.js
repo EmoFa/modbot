@@ -1,3 +1,5 @@
+const { version } = require("discord.js");
+
 module.exports = {
     name: 'help',
     description: "The bot will DM you a help embed.",
@@ -12,14 +14,17 @@ module.exports = {
             {name: 'mute', value: "You can use this command to mute a member. You can mute them until you decide to unmute them or put them on a timer \nExample: -mute @Username#1234 or -mute @Username#1234 10s (s = seconds, m = minutes, d = days, y = years)"},
             {name: 'unmute', value: "You can use this command to unmute a member. \nExample: -unmute @Username#1234"}
         )
+        .setFooter('Version: ' + version + ' • ' + createdAt)
 
         const newEmbed2 = new Discord.MessageEmbed()
         .setColor('#6DB6D9')
         .setTitle('__Utility__')
         .setDescription("Here are the current utility commands for this bot.")
         .addFields(
-            {name: 'clear', value: "You can use this command to clear a certain amount of messages. (including the command you sent) \nExample: -clear 10"}
+            {name: 'clear', value: "You can use this command to clear a certain amount of messages. (including the command you sent) \nExample: -clear 10"},
+            {name: 'permissiontest', value: "You can use this command to see if the permissions for moderation commands are working. If the permissions are working the bot will respond with 'the code is working', if the permissions are not working the bot will respond with 'the cdoe is not working.' \nIf the bot says the code is not working please tell <@527184387209691147> to fix it."}
         )
+        .setFooter('Version: ' + version + ' • ' + createdAt)
 
         const newEmbed3 = new Discord.MessageEmbed()
         .setColor('#6DB6D9')
@@ -30,9 +35,11 @@ module.exports = {
             {name: 'youtube', value: "The bot will give you his youtube channel, if he even has one."},
             {name: '8ball', value: "Basic magic 8ball command. \nExample: -8ball Will I have a good day?"}
         )
+        .setFooter('Version: ' + version + ' • ' + createdAt)
 
         message.author.send(newEmbed);
         message.author.send(newEmbed2);
+        message.author.send(newEmbed3);
         message.react('📬');
         message.channel.send("You've got mail!")
     }
