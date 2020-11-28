@@ -1,10 +1,14 @@
 const Discord = require('discord.js');
 
+const Keyv = require('keyv');
+
 const config = require('./config.json');
 
 const client = new Discord.Client();
 
-const prefix = config.prefix;
+const prefixes = new Keyv('sqlite://path/to.sqlite');
+
+const globalPrefix = config.prefix;
 
 const fs = require('fs');
 
@@ -23,9 +27,9 @@ client.once('ready', () =>{
 });
 
 client.on('message', message =>{
-    if(!message.content.startsWith(prefix) || message.author.bot) return;
+    if(!message.content.startsWith(globalPrefix) || message.author.bot) return;
 
-    const args = message.content.slice(prefix.length).split(/ +/);
+    const args = message.content.slice(globalPrefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
     if(command === 'ping'){
@@ -46,6 +50,8 @@ client.on('message', message =>{
         client.commands.get('mute').execute(message, args);
     } else if(command === 'unmute'){
         client.commands.get('unmute').execute(message, args);
+    } else if(command === 'prefix'){
+        client.commands.get('prefix').execute(message, args);
     }
 });
 
