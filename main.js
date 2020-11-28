@@ -56,7 +56,7 @@ client.on('message', message =>{
     } else if(command === 'permissiontest'){
         client.commands.get('permissiontest').execute(message, args);
     } else if(command === 'help'){
-        client.commands.get('help').execute(message, args, Discord);
+        client.commands.get('help').execute(message, args, Discord, botversion);
     } else if(command === 'clear'){
         client.commands.get('clear').execute(message, args);
     } else if(command === 'kick'){
@@ -70,7 +70,7 @@ client.on('message', message =>{
     } else if(command === '8ball'){
         client.commands.get('8ball').execute(message, args);
     } else if(command === 'userinfo'){
-        client.commands.get('userinfo').execute(message, args, Discord);
+        client.commands.get('userinfo').execute(message, args, botversion);
     }
 });
 

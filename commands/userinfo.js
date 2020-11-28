@@ -1,7 +1,7 @@
 module.exports = {
     name: 'userinfo',
     description: "Shows the authors info.",
-    execute(message, args, Discord){
+    execute(message, args, Discord, botversion){
         const newEmbed = new Discord.MessageEmbed()
         .setColor('#6DB6D9')
         .setTitle("__User Information__")
@@ -12,7 +12,7 @@ module.exports = {
             {name: 'Current Server', vale: message.guild.name}
         )
         .setThumbnail(message.author.avatarUrl)
-        .setFooter('Version: ' + version)
+        .setFooter('Version: ' + botversion)
         .setTimestamp()
 
         message.channel.send(newEmbed)
