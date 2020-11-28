@@ -10,7 +10,7 @@ module.exports = {
         
             console.log(member)
         
-            const userinfoEmbed = new MessageEmbed()
+            const userinfoEmbed = new Discord.MessageEmbed()
               .setAuthor(`User info for ${user.username}`, user.displayAvatarURL())
               .addFields(
                 {
