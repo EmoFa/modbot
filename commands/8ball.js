@@ -4,9 +4,15 @@ var response = options[Math.floor(Math.random()*options.length)];
 module.exports = {
     name: '8ball',
     description: "Ask the magic 8ball a question.",
-    async execute(message, args){
+    async execute(message, args, Discord, botversion){
         if(!args[0]) return message.reply("Please ask a question");
 
-        await message.channel.send(response);
+        const magic8ballEmbed = new Discord.MessageEmbed()
+        .setColor('#6DB6D9')
+        .setTitle(response)
+        .setFooter('Version: ' + botversion)
+        .setTimestamp()
+
+        await message.channel.send(magic8ballEmbed);
     }
 }
