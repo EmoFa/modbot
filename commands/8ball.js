@@ -10,6 +10,7 @@ module.exports = {
         const magic8ballEmbed = new Discord.MessageEmbed()
         .setColor('#6DB6D9')
         .setTitle(response)
+        .setImage('https://www.horoscope.com/images-US/games/game-magic-8-ball-no-text.png')
         .setFooter('Version: ' + botversion)
         .setTimestamp()
 
