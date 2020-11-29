@@ -52,6 +52,8 @@ client.on('message', message =>{
         client.commands.get('8ball').execute(message, args, Discord, botversion);
     } else if(command === 'info'){
         client.commands.get('info').execute(message, args, Discord, botversion);
+    } else if(command === 'code'){
+        client.commands.get('code').execute(message, args);
     }
 });
 

@@ -5,7 +5,8 @@ module.exports = {
     description: 'Mutes a member.',
     execute(message, args){
         const target = message.mentions.users.first();
-        if(target){
+        if(message.member.roles.cache.some(role => role.name === "Mod")){
+          if(target){
             let mainRole = message.guild.roles.cache.find(role => role.name === "Member");
             let muteRole = message.guild.roles.cache.find(role => role.name === "Muted");
 
@@ -27,6 +28,10 @@ module.exports = {
             }, ms(args[1]));
         } else {
             message.channel.send("Mention a valid user.");
+        }  
+        } else {
+            message.reply("you don't have the permissions to use this command.");
         }
+        
     }
 }

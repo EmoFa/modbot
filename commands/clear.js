@@ -15,7 +15,7 @@ module.exports = {
             message.channel.bulkDelete(messages);
         });   
         } else {
-            message.reply("you don't have the permissions to use this command.")
+            message.reply("you don't have the permissions to use this command.");
         }
         
         

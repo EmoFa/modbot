@@ -12,7 +12,7 @@ module.exports = {
                 message.channel.send('Mention a valid user.');
             }
         } else {
-            message.reply('did you really think you were allowed to use this?')
+            message.reply('did you really think you were allowed to use this?');
         }
         
     }
