@@ -22,7 +22,7 @@ module.exports = {
         .addFields(
             {name: 'clear', value: "You can use this command to clear a certain amount of messages. (including the command you sent) \nExample: -clear 10"},
             {name: 'permissiontest', value: "You can use this command to see if the permissions for moderation commands are working. If the permissions are working the bot will respond with 'the code is working', if the permissions are not working the bot will respond with 'the cdoe is not working.' \nIf the bot says the code is not working please tell <@527184387209691147> to fix it."},
-            {name: 'info', value: "This command will DM an embed with a little bit of information about the bot."}
+            {name: 'ping', value: "Shows the current latency of the bot."}
         )
         .setFooter('Version: ' + botversion)
         .setTimestamp()
@@ -32,9 +32,18 @@ module.exports = {
         .setTitle('__Fun__')
         .setDescription("Here are the current fun commands.")
         .addFields(
-            {name: 'ping', value: "Responds with 'pong!'. (may be changed to actually show latency later)"},
-            {name: 'youtube', value: "The bot will give you his youtube channel, if he even has one."},
             {name: '8ball', value: "Basic magic 8ball command. \nExample: -8ball Will I have a good day?"}
+        )
+        .setFooter('Version: ' + botversion)
+        .setTimestamp()
+
+        const helpEmbed4 = new Discord.MessageEmbed()
+        .setColor('#6DB6D9')
+        .setTitle('__Other__')
+        .setDescription("Here are the commands that don't really fit into a category.")
+        .addFields(
+            {name: 'youtube', value: "The bot will give you his youtube channel, if he even has one."},
+            {name: 'info', value: "This command will DM an embed with a little bit of information about the bot."}
         )
         .setFooter('Version: ' + botversion)
         .setTimestamp()
@@ -42,6 +51,7 @@ module.exports = {
         message.author.send(helpEmbed);
         message.author.send(helpEmbed2);
         message.author.send(helpEmbed3);
+        message.author.send(helpEmbed4);
         message.react('📬');
         message.channel.send("You've got mail!");
     }
