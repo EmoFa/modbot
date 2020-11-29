@@ -8,7 +8,7 @@ const prefix = '-';
 
 const fs = require('fs');
 
-const botversion = ('1.3.2');
+const botversion = ('1.4.2');
 
 client.commands = new Discord.Collection();
 
