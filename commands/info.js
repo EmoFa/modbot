@@ -8,7 +8,7 @@ module.exports = {
         .setDescription('Here is some information about the bot.')
         .addFields(
             {name: '>_ Coded In', value: "JavaScript"},
-            {name: 'Developed By', value: "EmoFa#0624"},
+            {name: 'Developed By', value: "<@527184387209691147>"},
             {name: 'Bot Purpose', value: "As you can tell by the name, this bot was originally made for moderation. Although this is the main focus of the bot there still some other fun commands to use. Use -help to see them all."},
             {name: 'Invite Link', value: "You can use this link to invite me to other servers, https://discord.com/oauth2/authorize?client_id=781277029910839338&scope=bot&permissions=2147483391"}
         )
