@@ -32,7 +32,9 @@ module.exports = {
         .setTitle('__Fun__')
         .setDescription("Here are the current fun commands.")
         .addFields(
-            {name: '8ball', value: "Basic magic 8ball command. \nExample: -8ball Will I have a good day?"}
+            {name: '8ball', value: "Basic magic 8ball command. Has 20 repsonses, 10 positive, 5 non-committal responses, and 5 negative responses. \nExample: -8ball Will I have a good day?"},
+            {name: 'randomnumber', value: "I will respond with a random number between 1 and 100."},
+            {name: 'coinflip', value: "I will flip a coin and tell you if you got heads or tails."}
         )
         .setFooter('Version: ' + botversion)
         .setTimestamp()

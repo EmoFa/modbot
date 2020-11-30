@@ -56,6 +56,8 @@ client.on('message', message =>{
         client.commands.get('code').execute(message, args);
     } else if(command === 'randomnumber'){
         client.commands.get('randomnumber').execute(message, args);
+    } else if(command === 'coinflip'){
+        client.commands.get('coinflip').execute(message, args, Discord, botversion);
     }
 });
 
