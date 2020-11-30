@@ -10,7 +10,8 @@ module.exports = {
             {name: 'kick', value: "You can use this command to kick a member. \nExample: -kick @Username#1234"},
             {name: 'ban', value: "You can use this command to ban a member. \nExample: -ban @Username#1234"},
             {name: 'mute', value: "You can use this command to mute a member. You can mute them until you decide to unmute them or put them on a timer \nExample: -mute @Username#1234 or -mute @Username#1234 10s (s = seconds, m = minutes, d = days, y = years)"},
-            {name: 'unmute', value: "You can use this command to unmute a member. \nExample: -unmute @Username#1234"}
+            {name: 'unmute', value: "You can use this command to unmute a member. \nExample: -unmute @Username#1234"},
+            {name: 'clear', value: "You can use this command to clear a certain amount of messages. (including the command you sent) \nExample: -clear 10"}
         )
         .setFooter('Version: ' + botversion)
         .setTimestamp()
@@ -20,7 +21,6 @@ module.exports = {
         .setTitle('__Utility__')
         .setDescription("Here are the current utility commands for this bot.")
         .addFields(
-            {name: 'clear', value: "You can use this command to clear a certain amount of messages. (including the command you sent) \nExample: -clear 10"},
             {name: 'permissiontest', value: "You can use this command to see if the permissions for moderation commands are working. If the permissions are working the bot will respond with 'the code is working', if the permissions are not working the bot will respond with 'the cdoe is not working.' \nIf the bot says the code is not working please tell <@527184387209691147> to fix it."},
             {name: 'ping', value: "Shows the current latency of the bot."}
         )
