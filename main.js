@@ -4,12 +4,6 @@ const Discord = require('discord.js');
 
 const client = new Discord.Client();
 
-const { Player } = require("discord-player");
-// Create a new Player (you don't need any API Key)
-const player = new Player(client);
-// To easily access the player
-client.player = player;
-
 const prefix = '-';
 
 const fs = require('fs');
@@ -64,10 +58,6 @@ client.on('message', message =>{
         client.commands.get('randomnumber').execute(message, args);
     } else if(command === 'coinflip'){
         client.commands.get('coinflip').execute(message, args, Discord, botversion);
-    } else if(command === 'play'){
-        client.commands.get('play').execute(message, args, client);
-    } else if(command === 'stop'){
-        client.commands.get('stop').execute(message, args, client);
     }
 });
 
