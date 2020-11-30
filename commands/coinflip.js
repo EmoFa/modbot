@@ -2,9 +2,6 @@ module.exports = {
     name: 'coinflip',
     description: "Flip a coin and see what you get.",
     execute(message, args, Discord, botversion){
-        var options = [headsEmbed, tailsEmbed];
-        var response = options[Math.floor(Math.random()*options.length)];
-
         const headsEmbed = new Discord.MessageEmbed()
         .setColor('#6DB6D9')
         .setTitle("You got heads!")
@@ -19,6 +16,9 @@ module.exports = {
         .setFooter('Version: ' + botversion)
         .setTimestamp()
 
+        var options = [headsEmbed, tailsEmbed];
+        var response = options[Math.floor(Math.random()*options.length)];
+        
         message.channel.send(response);
     }
 }
