@@ -54,6 +54,8 @@ client.on('message', message =>{
         client.commands.get('info').execute(message, args, Discord, botversion);
     } else if(command === 'code'){
         client.commands.get('code').execute(message, args);
+    } else if(command === 'randomnumber'){
+        client.commands.get('randomnumber').execute(message, args);
     }
 });
 
