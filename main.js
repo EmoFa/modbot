@@ -10,6 +10,12 @@ const fs = require('fs');
 
 const botversion = ('1.4.2');
 
+client.on('message', msg => {
+    if (msg.content.includes("noah")) {
+        msg.channel.send("You guys talking about Noah? I miss that guy...");
+    }
+});
+
 client.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
