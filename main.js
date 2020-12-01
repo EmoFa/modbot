@@ -30,6 +30,13 @@ client.once('ready', () =>{
     client.user.setActivity('for -', {type: "WATCHING"}).catch(console.error);
 });
 
+client.on('guildMemberAdd', guildMemberAdd =>{
+    let welcomeRole = guildMember.guild.roles.cache.find(role => role.name === 'Member');
+
+    guildMember.roles.add(welcomeRole);
+    guildMember.guild.channels.cache.find(channel => channel.name === 'welcome').send(`Welcome <@${guildMember.user.id}> to our server!`);
+});
+
 client.on('message', message =>{
     if(!message.content.startsWith(prefix) || message.author.bot) return;
 
