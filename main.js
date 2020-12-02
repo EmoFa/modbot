@@ -8,7 +8,7 @@ const prefix = '-';
 
 const fs = require('fs');
 
-const botversion = ('1.4.2');
+const botversion = ('1.6.1');
 
 client.on('message', msg => {
     if (msg.content.includes("noah")) {
