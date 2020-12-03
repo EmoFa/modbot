@@ -11,7 +11,7 @@ const fs = require('fs');
 const botversion = ('1.6.1');
 
 client.on('message', msg => {
-    if (msg.content.includes("noah", "Noah", "NOAH", "nOaH", "noaH", "noAh", "nOah", "NoAh", "NOah", "noAH")) {
+    if (msg.content.includes("noah")) {
         msg.channel.send("You guys talking about Noah? I miss that guy...");
     }
 });
