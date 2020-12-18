@@ -22,7 +22,7 @@ module.exports = {
         }
 
         const video = await videoFinder(args.join(' '));
-        if(!video){
+        if(video){
             const stream = ytdl(video.url, {filter: 'audioonly'});
             conneection.play(stream, {seek: 0, volume: 1})
             .on('finish', () =>{
