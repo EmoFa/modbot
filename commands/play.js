@@ -13,7 +13,31 @@ module.exports = {
         if(!permissions.has('SPEAK')) return message.channel.send("You don't have the required to permissions to use this command.");
         if(!args.length) return message.channel.send("You need to specify what song you want.");
 
-        const conneection = await voiceChannel.join();
+        const validURL = (str) =>{
+            var regex = /(http|https):\/\/(\w+:{0, 1}\w*)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
+            if(!regex.test(str)){
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        if(validURL(args[0])){
+            const connection = await voiceChannel.join();
+            const stream = ytdl(args[0], {filter: 'audioonly'});
+
+            connection.play(stream, {seek: 0, volume: 1})
+            .on('finish', () =>{
+                voiceChannel.leave();
+                message.channel.send("Leaving the voice channel... :smiling_face_with_tear");
+            });
+
+            await message.reply(`:thumbsup: Now Playing ***${video.title}***`)
+
+            return
+        }
+
+        const connection = await voiceChannel.join();
 
         const videoFinder = async (query) =>{
             const videoResult = await ytSearch(query);
@@ -24,7 +48,7 @@ module.exports = {
         const video = await videoFinder(args.join(' '));
         if(video){
             const stream = ytdl(video.url, {filter: 'audioonly'});
-            conneection.play(stream, {seek: 0, volume: 1})
+            connection.play(stream, {seek: 0, volume: 1})
             .on('finish', () =>{
                 voiceChannel.leave();
             });
