@@ -6,6 +6,6 @@ module.exports = {
 
         if(!voiceChannel) return message.channel.send("You need to be in a voice channel to use this command.");
         await voiceChannel.leave();
-        await message.channel.send("Leaving the voice channel... :smiling_face_with_tear");
+        await message.channel.send("Leaving the voice channel... :smiling_face_with_tear:");
     }
 }

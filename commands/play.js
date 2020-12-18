@@ -29,10 +29,10 @@ module.exports = {
             connection.play(stream, {seek: 0, volume: 1})
             .on('finish', () =>{
                 voiceChannel.leave();
-                message.channel.send("Leaving the voice channel... :smiling_face_with_tear");
+                message.channel.send("Leaving the voice channel... :smiling_face_with_tear:");
             });
 
-            await message.reply(`:thumbsup: Now Playing ***${video.title}***`)
+            await message.reply(`:thumbsup: Now Playing ***${video.title}***`);
 
             return
         }
