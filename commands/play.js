@@ -26,13 +26,23 @@ module.exports = {
             const connection = await voiceChannel.join();
             const stream = ytdl(args[0], {filter: 'audioonly'});
 
+            const videoFinder = async (query) =>{
+                const videoResult = await ytSearch(query);
+    
+                return (videoResult.videos.length > 1) ? videoResult.videos[0] : null;
+            }
+    
+            const video = await videoFinder(args.join(' '));
+            
+            await message.reply(`:thumbsup: Now Playing ***${video.title}***`);
+
             connection.play(stream, {seek: 0, volume: 1})
             .on('finish', () =>{
                 voiceChannel.leave();
                 message.channel.send("Leaving the voice channel... :smiling_face_with_tear:");
             });
 
-            await message.reply(`:thumbsup: Now Playing ***${video.title}***`);
+            
 
             return
         }
