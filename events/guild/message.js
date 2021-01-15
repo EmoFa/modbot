@@ -7,5 +7,5 @@ module.exports = (Discord, client, message, botversion) =>{
 
     const command = client.commands.get(cmd);
 
-    if(command) command.execute(client, message, args, Discord, botversion);
+    if(command)command.execute(client, message, args, Discord, botversion);
 }
