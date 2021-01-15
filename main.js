@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 //const config = require('./config.json');
 const client = new Discord.Client();
 //const prefix = '-';
-const fs = require('fs');
+//const fs = require('fs');
 const botversion = ('1.6.1');
 
 client.commands = new Discord.Collection();
