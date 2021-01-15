@@ -1,7 +1,7 @@
 module.exports = {
     name: 'clear',
     description: 'Delete a certain amount of messages in a channel.',
-    async execute(message, args){
+    async execute(client, message, args){
         if(message.member.roles.cache.some(role => role.name === "Mod")){
          if(!args[0]) return message.reply("please enter the amount of messages you want to clear.");
 

@@ -3,7 +3,7 @@ const { GuildMember } = require("discord.js")
 module.exports = {
     name: 'permissiontest',
     description: 'command to test permission requirement code.',
-    execute(message, args){
+    execute(client, message, args){
         if(message.member.roles.cache.some(role => role.name === "Mod")){
             message.channel.send('the code is working')
 

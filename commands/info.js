@@ -1,7 +1,7 @@
 module.exports = {
     name: 'info',
     description: "Shows info about the bot.",
-    execute(message, args, Discord, botversion){
+    execute(client, message, args, Discord, botversion){
         const infoEmbed = new Discord.MessageEmbed()
         .setColor('#6DB6D9')
         .setTitle('__Information__')

@@ -1,7 +1,7 @@
 module.exports = {
     name: 'help',
     description: "The bot will DM you a help embed.",
-    execute(message, args, Discord, botversion){
+    execute(client, message, args, Discord, botversion){
         const helpEmbed = new Discord.MessageEmbed()
         .setColor('#6DB6D9')
         .setTitle('__Moderation__')

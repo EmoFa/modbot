@@ -3,7 +3,7 @@ const ms = require('ms');
 module.exports = {
     name: 'mute',
     description: 'Mutes a member.',
-    execute(message, args){
+    execute(client, message, args){
         const target = message.mentions.users.first();
         if(message.member.roles.cache.some(role => role.name === "Mod")){
           if(target){
