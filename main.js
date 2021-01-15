@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 //const prefix = '-';
 //const fs = require('fs');
-const botversion = ('1.6.1');
+const botversion = ('2.0.4');
 
 client.commands = new Discord.Collection();
 client.events = new Discord.Collection();
