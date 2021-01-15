@@ -1,20 +1,9 @@
 const Discord = require('discord.js');
-
 //const config = require('./config.json');
-
 const client = new Discord.Client();
-
 //const prefix = '-';
-
 const fs = require('fs');
-
 const botversion = ('1.6.1');
-
-client.on('message', msg => {
-    if (msg.content.includes("noah")) {
-        msg.channel.send("You guys talking about Noah? I miss that guy...");
-    }
-});
 
 client.commands = new Discord.Collection();
 client.events = new Discord.Collection();
