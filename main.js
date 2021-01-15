@@ -18,10 +18,9 @@ client.events = new Discord.Collection();
 //    client.commands.set(command.name, command);
 //}
 
-//client.once('ready', () =>{
-//    console.log('ModBot is online!');
-//    client.user.setActivity('for -', {type: "WATCHING"}).catch(console.error);
-//});
+client.once('ready', () =>{
+    client.user.setActivity('for -', {type: "WATCHING"}).catch(console.error);
+});
 
 //client.on('guildMemberAdd', guildMemberAdd =>{
 //    let welcomeRole = guildMember.guild.roles.cache.find(role => role.name === 'Member');
