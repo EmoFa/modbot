@@ -1,4 +1,4 @@
-module.exports = (Discord, client, message) =>{
+module.exports = (Discord, client, message, botversion) =>{
     const prefix = '-';
     if(message.content.startsWith(prefix) || message.author.bot) return;
 
@@ -7,5 +7,5 @@ module.exports = (Discord, client, message) =>{
 
     const command = client.commands.get(cmd);
 
-    if(command) command.execute(client, message, args, Discord);
+    if(command) command.execute(client, message, args, Discord, botversion);
 }
