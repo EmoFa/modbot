@@ -2,7 +2,7 @@ module.exports = {
     name: 'coinflip',
     aliases: ['flip', 'headstails'],
     description: "Flip a coin and see what you get.",
-    execute(client, message, args, Discord, botversion){
+    execute(client, message, cmd, args, Discord, botversion){
         const headsEmbed = new Discord.MessageEmbed()
         .setColor('#6DB6D9')
         .setTitle("You got heads!")
