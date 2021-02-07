@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 //const config = require('./config.json');
 const client = new Discord.Client();
-const botversion = ('2.0.7');
 
 client.commands = new Discord.Collection();
 client.events = new Discord.Collection();

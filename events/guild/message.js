@@ -7,5 +7,7 @@ module.exports = (Discord, client, message, botversion) =>{
 
     const command = client.commands.get(cmd);
 
+    const botversion = ('2.0.7');
+
     if(command)command.execute(client, message, args, Discord, botversion);
 }
