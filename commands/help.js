@@ -5,7 +5,7 @@ module.exports = {
         const helpEmbed = new Discord.MessageEmbed()
         .setColor('#6DB6D9')
         .setTitle('__Moderation__')
-        .setDescription('Here are the current moderation commands for this bot.')
+        .setDescription('Here are the current moderation commands.')
         .addFields(
             {name: 'kick', value: "You can use this command to kick a member. \nExample: -kick @Username#1234"},
             {name: 'ban', value: "You can use this command to ban a member. \nExample: -ban @Username#1234"},
@@ -19,10 +19,10 @@ module.exports = {
         const helpEmbed2 = new Discord.MessageEmbed()
         .setColor('#6DB6D9')
         .setTitle('__Utility__')
-        .setDescription("Here are the current utility commands for this bot.")
+        .setDescription("Here are the current utility commands.")
         .addFields(
             {name: 'permissiontest', value: "You can use this command to see if the permissions for moderation commands are working. If the permissions are working the bot will respond with 'the code is working', if the permissions are not working the bot will respond with 'the cdoe is not working.' \nIf the bot says the code is not working please tell <@527184387209691147> to fix it."},
-            {name: 'ping', value: "Shows the current latency of the bot."}
+            {name: 'ping', value: "Shows my current latency."}
         )
         .setFooter('Version: ' + botversion)
         .setTimestamp()
@@ -32,7 +32,7 @@ module.exports = {
         .setTitle('__Fun__')
         .setDescription("Here are the current fun commands.")
         .addFields(
-            {name: '8ball', value: "Basic magic 8ball command. Has 20 repsonses, 10 positive, 5 non-committal responses, and 5 negative responses. \nExample: -8ball Will I have a good day?"},
+            {name: '8ball', value: "Basic magic 8ball command. It has 20 repsonses: 10 positive, 5 non-committal responses, and 5 negative responses. \nExample: -8ball Will I have a good day?"},
             {name: 'randomnumber', value: "I will respond with a random number between 1 and 100."},
             {name: 'coinflip', value: "I will flip a coin and tell you if you got heads or tails."}
         )
@@ -41,11 +41,22 @@ module.exports = {
 
         const helpEmbed4 = new Discord.MessageEmbed()
         .setColor('#6DB6D9')
+        .setTitle('__Music__')
+        .setDescription("Here are the current music commands.")
+        .addFields(
+            {name: 'play', value: "I will play a song of your choice in the VC you are currently in. \nExample: -play despacito"},
+            {name: 'leave', value: "I will stop playing music and leave the VC."}
+        )
+        .setFooter('Version: ' + botversion)
+        .setTimestamp()
+
+        const helpEmbed5 = new Discord.MessageEmbed()
+        .setColor('#6DB6D9')
         .setTitle('__Other__')
         .setDescription("Here are the commands that don't really fit into a category.")
         .addFields(
-            {name: 'youtube', value: "The bot will give you his youtube channel, if he even has one."},
-            {name: 'info', value: "This command will DM an embed with a little bit of information about the bot."}
+            {name: 'youtube', value: "I will give you my youtube channel, if I even have one."},
+            {name: 'info', value: "I will DM an embed with a little bit of information about the bot."}
         )
         .setFooter('Version: ' + botversion)
         .setTimestamp()
@@ -54,6 +65,7 @@ module.exports = {
         message.author.send(helpEmbed2);
         message.author.send(helpEmbed3);
         message.author.send(helpEmbed4);
+        message.author.send(helpEmbed5);
         message.react('📬');
         message.channel.send("You've got mail!");
     }
