@@ -9,5 +9,5 @@ module.exports = (Discord, client, message) =>{
 
     const botversion = ('2.1.3');
 
-    if(command)command.execute(client, message, args, Discord, botversion);
+    if(command)command.execute(client, message, cmd, args, Discord, botversion);
 }

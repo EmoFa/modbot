@@ -1,5 +1,6 @@
 module.exports = {
     name: 'coinflip',
+    aliases: ['flip', 'headstails'],
     description: "Flip a coin and see what you get.",
     execute(client, message, args, Discord, botversion){
         const headsEmbed = new Discord.MessageEmbed()

@@ -35,9 +35,9 @@ module.exports = {
         .setTitle('__Fun__')
         .setDescription("Here are the current fun commands.")
         .addFields(
-            {name: '8ball', value: "Basic magic 8ball command. It has 20 repsonses: 10 positive, 5 non-committal responses, and 5 negative responses. \nExample: -8ball Will I have a good day? \nAliases: 8b, magic ball"},
+            {name: '8ball', value: "Basic magic 8ball command. It has 20 repsonses: 10 positive, 5 non-committal responses, and 5 negative responses. \nExample: -8ball Will I have a good day? \nAliases: 8b"},
             {name: 'randomnumber', value: "I will respond with a random number between 1 and 100."},
-            {name: 'coinflip', value: "I will flip a coin and tell you if you got heads or tails."}
+            {name: 'coinflip', value: "I will flip a coin and tell you if you got heads or tails. \nAliases: flip, headstails"}
         )
         .setFooter('Version: ' + botversion)
         .setTimestamp()
@@ -48,7 +48,8 @@ module.exports = {
         .setDescription("Here are the current music commands.")
         .addFields(
             {name: 'play', value: "I will play a song of your choice in the VC you are currently in. \nExample: -play despacito \nExample: -play https://www.youtube.com/watch?v=kJQP7kiw5Fk \nAliases: p"},
-            {name: 'leave', value: "I will stop playing music and leave the VC. \nAliases: l"}
+            {name: 'skip', value: "I will skip the song currently playing and go to the next one in the queue."},
+            {name: 'stop', value: "I will stop playing music and leave the VC."}
         )
         .setFooter('Version: ' + botversion)
         .setTimestamp()
