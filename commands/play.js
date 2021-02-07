@@ -20,7 +20,7 @@ module.exports = {
         const server_queue = queue.get(message.guild.id);
 
         if(cmd === 'play'){
-            if(!args.length) return message.channel.send("You need to specify a song.");
+            if(!args.length) return message.reply("You need to specify a song.");
             let song = {};
 
             if (ytdl.validateURL(args[0])) {
@@ -50,7 +50,7 @@ module.exports = {
                     songs: []
                 }
     
-                queue.set(message.guil.id, queue_constructor);
+                queue.set(message.guild.id, queue_constructor);
                 queue_constructor.songs.push(song);
     
                 try {
@@ -68,7 +68,7 @@ module.exports = {
             }
         }
         if(cmd === 'p'){
-            if(!args.length) return message.channel.send("You need to specify a song.");
+            if(!args.length) return message.reply("You need to specify a song.");
             let song = {};
 
             if (ytdl.validateURL(args[0])) {
@@ -98,7 +98,7 @@ module.exports = {
                     songs: []
                 }
     
-                queue.set(message.guil.id, queue_constructor);
+                queue.set(message.guild.id, queue_constructor);
                 queue_constructor.songs.push(song);
     
                 try {
