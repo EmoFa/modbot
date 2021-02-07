@@ -1,5 +1,6 @@
 module.exports = {
     name: 'help',
+    aliases: ['commands', 'cmd'],
     description: "The bot will DM you a help embed.",
     execute(client, message, args, Discord, botversion){
         const helpEmbed = new Discord.MessageEmbed()
@@ -22,7 +23,9 @@ module.exports = {
         .setDescription("Here are the current utility commands.")
         .addFields(
             {name: 'permissiontest', value: "You can use this command to see if the permissions for moderation commands are working. If the permissions are working the bot will respond with 'the code is working', if the permissions are not working the bot will respond with 'the cdoe is not working.' \nIf the bot says the code is not working please tell <@527184387209691147> to fix it."},
-            {name: 'ping', value: "Shows my current latency."}
+            {name: 'ping', value: "Shows my current latency. \n Aliases: latency"},
+            {name: 'help', value: "The command you just used to see this. \nAliases: commands, cmd"},
+            {name: 'code', value: "I will give you a link to the GitHub repository so you can view the code. \nAliases: git, github, repository, github repository"}
         )
         .setFooter('Version: ' + botversion)
         .setTimestamp()
@@ -32,7 +35,7 @@ module.exports = {
         .setTitle('__Fun__')
         .setDescription("Here are the current fun commands.")
         .addFields(
-            {name: '8ball', value: "Basic magic 8ball command. It has 20 repsonses: 10 positive, 5 non-committal responses, and 5 negative responses. \nExample: -8ball Will I have a good day?"},
+            {name: '8ball', value: "Basic magic 8ball command. It has 20 repsonses: 10 positive, 5 non-committal responses, and 5 negative responses. \nExample: -8ball Will I have a good day? \nAliases: 8b, magic ball"},
             {name: 'randomnumber', value: "I will respond with a random number between 1 and 100."},
             {name: 'coinflip', value: "I will flip a coin and tell you if you got heads or tails."}
         )
@@ -44,8 +47,8 @@ module.exports = {
         .setTitle('__Music__')
         .setDescription("Here are the current music commands.")
         .addFields(
-            {name: 'play', value: "I will play a song of your choice in the VC you are currently in. \nExample: -play despacito \nExample: -play https://www.youtube.com/watch?v=kJQP7kiw5Fk"},
-            {name: 'leave', value: "I will stop playing music and leave the VC."}
+            {name: 'play', value: "I will play a song of your choice in the VC you are currently in. \nExample: -play despacito \nExample: -play https://www.youtube.com/watch?v=kJQP7kiw5Fk \nAliases: p"},
+            {name: 'leave', value: "I will stop playing music and leave the VC. \nAliases: l"}
         )
         .setFooter('Version: ' + botversion)
         .setTimestamp()
@@ -55,8 +58,8 @@ module.exports = {
         .setTitle('__Other__')
         .setDescription("Here are the commands that don't really fit into a category.")
         .addFields(
-            {name: 'youtube', value: "I will give you my youtube channel, if I even have one."},
-            {name: 'info', value: "I will DM an embed with a little bit of information about the bot."}
+            {name: 'youtube', value: "I will give you my youtube channel, if I even have one. \nAliases: yt"},
+            {name: 'info', value: "I will DM an embed with a little bit of information about the bot. \nAliases: about"}
         )
         .setFooter('Version: ' + botversion)
         .setTimestamp()

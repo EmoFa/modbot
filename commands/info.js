@@ -1,5 +1,6 @@
 module.exports = {
     name: 'info',
+    aliases: ['about'],
     description: "Shows info about the bot.",
     execute(client, message, args, Discord, botversion){
         const infoEmbed = new Discord.MessageEmbed()
