@@ -54,7 +54,7 @@ module.exports = {
                 queue_constructor.songs.push(song);
     
                 try {
-                    const connect = await voice_channel.join();
+                    const connection = await voice_channel.join();
                     queue_constructor.connection = connection;
                     video_player(message.guild, queue_constructor.songs[0]);
                 } catch (err) {
@@ -102,7 +102,7 @@ module.exports = {
                 queue_constructor.songs.push(song);
     
                 try {
-                    const connect = await voice_channel.join();
+                    const connection = await voice_channel.join();
                     queue_constructor.connection = connection;
                     video_player(message.guild, queue_constructor.songs[0]);
                 } catch (err) {
@@ -139,7 +139,7 @@ const video_player = async (guild, song) => {
 }
 
 const skip_song = (message, server_queue) => {
-    if(!member.message.voice.channel) return message.channel.send("You need to be in a voice channel to use this command.");
+    if(!message.member.voice.channel) return message.channel.send("You need to be in a voice channel to use this command.");
     if(!server_queue){
         return message.channel.send("There are no songs in queue 😔");
     }
@@ -147,7 +147,7 @@ const skip_song = (message, server_queue) => {
 }
 
 const stop_song = (message, server_queue) => {
-    if(!member.message.voice.channel) return message.channel.send("You need to be in a voice channel to use this command.");
+    if(!message.member.voice.channel) return message.channel.send("You need to be in a voice channel to use this command.");
     server_queue.songs = [];
     server_queue.connection.dispatcher.end();
 }
