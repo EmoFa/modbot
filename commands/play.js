@@ -1,7 +1,7 @@
 const ytdl = require('ytdl-core');
 const ytSearch = require('yt-search');
 const message = require('../events/guild/message');
-//const { execute } = require('./help');
+const { execute } = require('./help');
 
 const queue = new Map();
 // queue(message.guild.id, queue_constructor object { voice channel, text channel, connection, song[]);
@@ -37,7 +37,7 @@ module.exports = {
                 if(video){
                     song = { title: video.title, url: video.url }
                 } else {
-                    message.channel.send("Error finding the video.");
+                    message.reply("Error finding the video.");
                 }
             }
 
@@ -59,7 +59,7 @@ module.exports = {
                     video_player(message.guild, queue_constructor.songs[0]);
                 } catch (err) {
                     queue.delete(message.guild.id);
-                    message.channel.send("There was an error connecting.");
+                    message.reply("There was an error connecting.");
                     throw err;
                 }
             } else {
@@ -85,7 +85,7 @@ module.exports = {
                 if(video){
                     song = { title: video.title, url: video.url }
                 } else {
-                    message.channel.send("Error finding the video.");
+                    message.reply("Error finding the video.");
                 }
             }
 
@@ -107,7 +107,7 @@ module.exports = {
                     video_player(message.guild, queue_constructor.songs[0]);
                 } catch (err) {
                     queue.delete(message.guild.id);
-                    message.channel.send("There was an error connecting.");
+                    message.reply("There was an error connecting.");
                     throw err;
                 }
             } else {
@@ -139,15 +139,15 @@ const video_player = async (guild, song) => {
 }
 
 const skip_song = (message, server_queue) => {
-    if(!message.member.voice.channel) return message.channel.send("You need to be in a voice channel to use this command.");
+    if(!message.member.voice.channel) return message.reply("You need to be in a voice channel to use this command.");
     if(!server_queue){
-        return message.channel.send("There are no songs in queue 😔");
+        return message.reply("There are no songs in queue 😔");
     }
     server_queue.connection.dispatcher.end();
 }
 
 const stop_song = (message, server_queue) => {
-    if(!message.member.voice.channel) return message.channel.send("You need to be in a voice channel to use this command.");
-    server_queue.songs = [];
+    if(!message.member.voice.channel) return message.reply("You need to be in a voice channel to use this command.");
+    server_queue.song = [];
     server_queue.connection.dispatcher.end();
 }
