@@ -44,7 +44,7 @@ module.exports = {
         .setTitle('__Music__')
         .setDescription("Here are the current music commands.")
         .addFields(
-            {name: 'play', value: "I will play a song of your choice in the VC you are currently in. \nExample: -play despacito"},
+            {name: 'play', value: "I will play a song of your choice in the VC you are currently in. \nExample: -play despacito \nExample: -play https://www.youtube.com/watch?v=kJQP7kiw5Fk"},
             {name: 'leave', value: "I will stop playing music and leave the VC."}
         )
         .setFooter('Version: ' + botversion)
