@@ -9,5 +9,10 @@ module.exports = (Discord, client, message) =>{
 
     const botversion = ('2.1.3');
 
-    if(command)command.execute(client, message, cmd, args, Discord, botversion);
+    try {
+        command.execute(client, message, cmd, args, Discord, botversion);
+    } catch (err) {
+        message.reply("there was an error trying to execute this command.");
+        console.log(err);
+    }
 }

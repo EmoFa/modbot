@@ -148,6 +148,8 @@ const skip_song = (message, server_queue) => {
 
 const stop_song = (message, server_queue) => {
     if(!message.member.voice.channel) return message.reply("You need to be in a voice channel to use this command.");
-    server_queue.song = [];
+    //server_queue.songs = [];
+    await voiceChannel.leave();
     server_queue.connection.dispatcher.end();
+    message.channel.send("Leaving... :smiling_face_with_tear:");
 }
