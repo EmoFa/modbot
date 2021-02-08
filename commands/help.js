@@ -47,7 +47,7 @@ module.exports = {
         .setTitle('__Music__')
         .setDescription("Here are the current music commands.")
         .addFields(
-            {name: 'play', value: "I will play a song of your choice in the VC you are currently in. \nExample: -play despacito \nExample: -play https://www.youtube.com/watch?v=kJQP7kiw5Fk \nAliases: p"},
+            {name: 'play', value: "I will play a song of your choice in the VC you are currently in. \nExample: -play despacito \nExample: -play https://www.youtube.com/watch?v=kJQP7kiw5Fk"},
             {name: 'skip', value: "I will skip the song currently playing and go to the next one in the queue."},
             {name: 'stop', value: "I will stop playing music and leave the VC."}
         )
