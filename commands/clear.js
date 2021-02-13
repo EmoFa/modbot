@@ -1,8 +1,8 @@
 module.exports = {
     name: 'clear',
+    permissions: ["MANAGE_MESSAGES"],
     description: 'Delete a certain amount of messages in a channel.',
     async execute(client, message, args){
-        if(message.member.roles.cache.some(role => role.name === "Mod")){
          if(!args[0]) return message.reply("please enter the amount of messages you want to clear.");
 
         if(isNaN(args[0])) return message.reply('please enter a real number.');
@@ -13,11 +13,6 @@ module.exports = {
 
         await message.channel.messages.fetch({ limit: args[0]}).then(messages => {
             message.channel.bulkDelete(messages);
-        });   
-        } else {
-            message.reply("you don't have the permissions to use this command.");
-        }
-        
-        
+        });        
     }
 }

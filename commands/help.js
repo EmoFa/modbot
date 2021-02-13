@@ -22,7 +22,6 @@ module.exports = {
         .setTitle('__Utility__')
         .setDescription("Here are the current utility commands.")
         .addFields(
-            {name: 'permissiontest', value: "You can use this command to see if the permissions for moderation commands are working. If the permissions are working the bot will respond with 'the code is working', if the permissions are not working the bot will respond with 'the cdoe is not working.' \nIf the bot says the code is not working please tell <@527184387209691147> to fix it."},
             {name: 'ping', value: "Shows my current latency. \n Aliases: latency"},
             {name: 'help', value: "The command you just used to see this. \nAliases: commands, cmd"},
             {name: 'code', value: "I will give you a link to the GitHub repository so you can view the code. \nAliases: git, github, repository, github repository"}

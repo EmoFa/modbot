@@ -1,9 +1,9 @@
 module.exports = {
     name: 'unmute',
+    permissions: ["MANAGE_ROLES"],
     description: 'Unmutes a member.',
     execute(client, message, args){
         const target = message.mentions.users.first();
-        if(message.member.roles.cache.some(role => role.name === "Mod")){
            if(target){
             let mainRole = message.guild.roles.cache.find(role => role.name === "Member");
             let muteRole = message.guild.roles.cache.find(role => role.name === "Muted");
@@ -16,9 +16,5 @@ module.exports = {
         } else {
             message.channel.send("Mention a valid user.");
         } 
-        } else {
-            message.reply("you don't have the permissions to use this command.");
-        }
-        
     }
 }
