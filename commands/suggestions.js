@@ -5,7 +5,7 @@ module.exports = {
     description: "Allows to make a suggestion and have it posted in a channel where people can vote on it.",
     execute(client, message, cmd, args, Discord, botversion){
         const channel = message.guild.channels.cache.find(c => c.name === 'suggestions');
-        if(!channel) return message.channel.send('suggestions channel does not exist!');
+        if(!channel) return message.reply('suggestions channel does not exist!');
 
         let messageArgs = args.join(' ');
         const embed = new Discord.MessageEmbed()
