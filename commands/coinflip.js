@@ -1,5 +1,6 @@
 module.exports = {
     name: 'coinflip',
+    permissions: [],
     aliases: ['flip', 'headstails'],
     description: "Flip a coin and see what you get.",
     execute(client, message, cmd, args, Discord, botversion){

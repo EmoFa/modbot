@@ -7,6 +7,7 @@ const queue = new Map();
 // queue(message.guild.id, queue_constructor object { voice channel, text channel, connection, song[]);
 module.exports = {
     name: 'play',
+    permissions: [],
     aliases: ['skip', 'stop'],
     description: "Play skip or stop music.",
     async execute(client, message, cmd, args, Discord, botversion){

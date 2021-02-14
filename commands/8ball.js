@@ -1,5 +1,6 @@
 module.exports = {
     name: '8ball',
+    permissions: [],
     aliases: ['8b'],
     description: "Ask the magic 8ball a question.",
     async execute(client, message, cmd, args, Discord, botversion){

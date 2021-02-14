@@ -1,5 +1,6 @@
 module.exports = {
     name: 'info',
+    permissions: [],
     aliases: ['about'],
     description: "Shows info about the bot.",
     execute(client, message, cmd, args, Discord, botversion){

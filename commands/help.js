@@ -1,5 +1,6 @@
 module.exports = {
     name: 'help',
+    permissions: [],
     aliases: ['commands', 'cmd'],
     description: "The bot will DM you a help embed.",
     execute(client, message, cmd, args, Discord, botversion){
@@ -24,7 +25,8 @@ module.exports = {
         .addFields(
             {name: 'ping', value: "Shows my current latency. \n Aliases: latency"},
             {name: 'help', value: "The command you just used to see this. \nAliases: commands, cmd"},
-            {name: 'code', value: "I will give you a link to the GitHub repository so you can view the code. \nAliases: git, github, repository, github repository"}
+            {name: 'code', value: "I will give you a link to the GitHub repository so you can view the code. \nAliases: git, github, repository, github repository"},
+            {name: 'suggestions', value: "Allows you to make a suggestion that I will post in a channel for people to vote on."}
         )
         .setFooter('Version: ' + botversion)
         .setTimestamp()

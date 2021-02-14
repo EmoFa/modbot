@@ -1,5 +1,6 @@
 module.exports = {
     name: 'ping',
+    permissions: [],
     aliases: ['latency'],
     description: 'The bot responds with pong.',
     execute(client, message, args){
