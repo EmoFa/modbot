@@ -7,7 +7,7 @@ module.exports = (Discord, client, message) =>{
 
     const command = client.commands.get(cmd) || client.commands.find(a => a.aliases && a.aliases.includes(cmd));
 
-    const botversion = ('2.1.3');
+    const botversion = ('2.2.3');
 
     const validPermissions = [
         "CREATE_INSTANT_INVITE",
