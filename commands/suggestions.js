@@ -8,7 +8,7 @@ module.exports = {
         if(!channel) return message.channel.send('suggestions channel does not exist!');
 
         let messageArgs = args.join(' ');
-        const embed = new discord.MessageEmbed()
+        const embed = new Discord.MessageEmbed()
         .setColor('FADF2E')
         .setAuthor(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
         .setDescription(messageArgs)

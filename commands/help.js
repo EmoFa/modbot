@@ -26,7 +26,8 @@ module.exports = {
             {name: 'ping', value: "Shows my current latency. \n Aliases: latency"},
             {name: 'help', value: "The command you just used to see this. \nAliases: commands, cmd"},
             {name: 'code', value: "I will give you a link to the GitHub repository so you can view the code. \nAliases: git, github, repository, github repository"},
-            {name: 'suggestions', value: "Allows you to make a suggestion that I will post in a channel for people to vote on."}
+            {name: 'suggestions', value: "Allows you to make a suggestion that I will post in a channel for people to vote on. \nAliases: suggest, suggestion"},
+            {name: 'invite', value: "I'll give you an invite link so you can add me to your server. \nAliases: inv"}
         )
         .setFooter('Version: ' + botversion)
         .setTimestamp()
