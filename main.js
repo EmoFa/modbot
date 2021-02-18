@@ -14,7 +14,7 @@ client.once('ready', () =>{
     client.user.setActivity('for -', {type: "WATCHING"}).catch(console.error);
 });
 
-mongoose.connect(process.env.MONOGDB_SRV, {
+mongoose.connect(process.env.MONGODB_SRV, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false
