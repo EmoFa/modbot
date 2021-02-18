@@ -21,6 +21,7 @@
     "keyv": "^4.0.3",
     "merge-options": "^3.0.4",
     "moment": "^2.29.1",
+    "mongoose": "^5.11.17",
     "ms": "^2.1.2",
     "node-fetch": "^2.6.1",
     "sequelize": "^6.3.5",
