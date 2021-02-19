@@ -1,8 +1,11 @@
-module.exports = (client, message, Discord) =>{
-    client.on('guildMemberAdd', guildMemberAdd =>{
-        let welcomeRole = guildMember.guild.roles.cache.find(role => role.name === 'Member');
-    
-        guildMember.roles.add(welcomeRole);
-        guildMember.guild.channels.cache.find(channel => channel.name === 'welcome').send(`Welcome <@${guildMember.user.id}> to our server!`);
-    });
-}
+const profileModel = require("../../models/profileSchema");
+
+module.exports = async (client, discord, member) => {
+  let profile = await profileModel.create({
+    userID: member.id,
+    serverID: member.guild.id,
+    coins: 1000,
+    bank: 0,
+  });
+  profile.save();
+};

@@ -19,7 +19,7 @@ mongoose.connect(process.env.MONGODB_SRV, {
     useUnifiedTopology: true,
     useFindAndModify: false
 }).then(() => {
-    console.log('Connected to the database.');
+    console.log('Connected to the database!');
 }).catch((err) => {
     console.log(err);
 });
