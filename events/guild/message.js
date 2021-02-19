@@ -18,8 +18,6 @@ module.exports = async (Discord, client, message) =>{
     } catch (err) {
       console.log(err);
     }
-    
-    command.execute(message, args, cmd, client, Discord, profileData);
 
     const args = message.content.slice(prefix.length).split(/ +/);
     const cmd = args.shift().toLowerCase();
@@ -78,7 +76,7 @@ module.exports = async (Discord, client, message) =>{
       }
 
     try {
-        command.execute(client, message, cmd, args, Discord, botversion);
+        command.execute(client, message, cmd, args, Discord, botversion, profileData);
     } catch (err) {
         message.reply("there was an error trying to execute this command.");
         console.log(err);
