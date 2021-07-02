@@ -4,6 +4,6 @@ module.exports = {
     aliases: ["bal", "bl"],
     description: "Check the user balance",
     execute(client, message, cmd, args, Discord, botversion, profileData) {
-      message.channel.send(`Your wallet bal is ${profileData.coins}, you banks bal is ${profileData.bank}`);
+      message.channel.send(`Your wallet balance is **${profileData.coins}**, you banks balance is **${profileData.bank}**`);
     },
   };
